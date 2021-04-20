@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.container
+    div.header-content
+      ul.navbar
+        li(style='float:left')
+          a(href='#' class='home-nav' ) Home
+        li 
+          a(href='#' class='About-nav') About
+        li 
+          a(href='#' class='Contact-nav') Contact
+    div.body-content
+      h1.body-info Move plain text files across devices using a link.
+    div.body-form
+      form(action='#', method=POST)
+        textarea#inputbox(type='text', name='fname')
+        br
+        input(type='submit', value='Save Text')
+    div.footer-content
+      a(href='#' class='footer-message') Created by Olamilekan Aremu
+
