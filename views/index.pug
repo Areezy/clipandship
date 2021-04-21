@@ -5,16 +5,22 @@ block content
     div.header-content
       ul.navbar
         li(style='float:left')
-          a(href='#' class='home-nav' ) Home
+          a(href='/' class='home-nav' ) Home
         li 
           a(href='#' class='About-nav') About
         li 
           a(href='#' class='Contact-nav') Contact
-    div.body-content
-      h1.body-info Move plain text files across devices using a link.
+    div.body-card
+      div.body-content
+        h1.body-info-header Move plain text files across devices using a link
+        br
+        div.body-content-text
+          p.body-info-text Quickly move your plain text files between devices
+          p.body-info-text Just paste in the text box and enter the link you 
+          p.body-info-text would like to receive your text file on the other end
     div.body-form
       form(action='#', method=POST)
-        textarea#inputbox(type='text', name='fname')
+        textarea#inputbox(type='text', name='savedItem')
         br
         input(type='submit', value='Save Text')
     div.footer-content

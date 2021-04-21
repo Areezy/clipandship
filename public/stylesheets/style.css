@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
 body {
   padding: 0;
   margin: 0;
@@ -40,7 +46,11 @@ li a:hover {
 }
 
 .body-form{
+  margin-top: 20px;
   float: right; 
+  transition: 0.3s;
+  width: 45%;
+  margin-right: 20px;
 }
 
 .body-form #inputbox{
@@ -48,12 +58,53 @@ li a:hover {
   padding-top:0;
   padding-bottom:0.4em;
   padding-right: 0.4em;
-  margin-right: 50px;
-  width: 930px;
-  height: 530px;
-  box-sizing: border-box;
+  /* width: 930px; */
+  width: 100%; 
+  height: 510px;
+  /* box-sizing: border-box; */
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
 }
 
+.footer-content{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+}
+
+
+.body-card {
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  float: left;
+  /* width: fit-content; */
+  width: 50%;
+  /* width: 890px; */
+  height: 510px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.body-info-text{
+
+  /* font-size: large; */
+  /* display: flex;
+
+  justify-content: center;
+  align-content: center; */
+}
+
+.body-info-header {
+ 
+  /* font-size: large; */
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+}
