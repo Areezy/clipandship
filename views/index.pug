@@ -13,16 +13,15 @@ block content
     div.body-card
       div.body-content
         h1.body-info-header Move plain text files across devices using a link
-        br
-        div.body-content-text
-          p.body-info-text Quickly move your plain text files between devices
-          p.body-info-text Just paste in the text box and enter the link you 
-          p.body-info-text would like to receive your text file on the other end
+        p.body-info-text &#8226 Copy your text into the text box and click save.
+        p.body-info-text &#8226 You can provide a link to receive your content on the other end or can get a random link generated for you.
     div.body-form
       form(action='#', method=POST)
         textarea#inputbox(type='text', name='savedItem')
         br
-        input(type='submit', value='Save Text')
+    div.submit-body
+      textarea#url-To-Save.urlToSave(type='text', placeholder="url" name='urlToSave')
+      button#save-Button.saveButton Save Text
     div.footer-content
-      a(href='#' class='footer-message') Created by Olamilekan Aremu
+      a(href='https://github.com/Areezy' target='_blank' class='footer-message') Made with 	&#9829 by Olamilekan Aremu
 
