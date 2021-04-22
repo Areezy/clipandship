@@ -61,6 +61,7 @@ li a:hover {
   /* width: 930px; */
   width: 100%; 
   height: 510px;
+  font-size: larger;
   /* box-sizing: border-box; */
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -119,15 +120,15 @@ li a:hover {
 }
 
 .submit-body{
+
   
   display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-top: 35%;
+  margin-top: 15%;
+  margin-right: 50%;
 
 }
 
-.urlToSave{
+.urlToSave{ 
   padding-top: 20px;
   font-size: large;
   padding-bottom: 0;
@@ -152,6 +153,42 @@ li a:hover {
   color: white;
 }
 
-.text-retreived-page-card{
+.delete-time{
+  margin-top: 15px;
+  padding: 10px;
+}
+
+/* Status Page Styles Start here */
+.status-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+
+}
+.status-body-card {
+  margin-top: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  
+  width: fit-content;
+ 
+  /* width: 890px; */
+  height: fit-content;
+  padding: 10px;
+  
+}
+
+.status-qrcode{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+
+}
+
+.status-get-link{
+  cursor: pointer;
+  margin-left: 30%;
 
 }

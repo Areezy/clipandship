@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div.status-container
+    div.status-body-card
+      div.status-body-content
+        h1.status-body-info-header=status
+        img.status-qrcode(src=src)
+        a.status-get-link(href=`${link}`) Get your content here
+    div.footer-content
+      a(href='https://github.com/Areezy' target='_blank' class='footer-message') Made with 	&#9829 by Olamilekan Aremu
+
