@@ -2,19 +2,22 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   padding: 0;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+body,
+.inputbox {
+  background: #e8cbc0;
+  background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
 }
 
-
+a {
+  color: #00b7ff;
+}
 
 ul {
   list-style-type: none;
@@ -42,101 +45,77 @@ li a:hover {
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
-.body-form{
+.body-form {
   margin-top: 20px;
-  float: right; 
+  float: right;
   transition: 0.3s;
   width: 45%;
   margin-right: 20px;
 }
 
-.body-form #inputbox{
-  padding-left:0;
-  padding-top:0;
-  padding-bottom:0.4em;
+.inputbox {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0.4em;
   padding-right: 0.4em;
-  /* width: 930px; */
-  width: 100%; 
+  width: 100%;
   height: 510px;
   font-size: larger;
-  /* box-sizing: border-box; */
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
 }
 
-.footer-content{
+.footer-content {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
   text-align: center;
-
 }
 
-
 .body-card {
-
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   float: left;
-  /* width: fit-content; */
-  width: 50%;
-  /* width: 890px; */
+  width: 45%;
   height: 510px;
   margin-left: 20px;
   margin-top: 20px;
   padding: 10px;
 }
 
-.body-info-text{
-
-  /* font-size: large; */
-  /* display: flex;
-
-  justify-content: center;
-  align-content: center; */
-}
-
 .body-content {
   padding-top: 10%;
-    margin: auto;
+  margin: auto;
   width: 70%;
- 
-  /* font-size: large; */
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
 }
 
-
-.body-info-text{
+.body-info-text {
   font-size: large;
-
 }
 
-.submit-body{
-
-  
+.submit-body {
   display: flex;
-  margin-top: 15%;
-  margin-right: 50%;
 
+  float: left;
+
+  position: absolute;
+  margin-top: 5%;
+  left: 40%;
 }
 
-.urlToSave{ 
+.urlToSave {
   padding-top: 20px;
   font-size: large;
   padding-bottom: 0;
 }
 
-
-
-.saveButton{
+.saveButton {
   background-color: white;
   color: black;
   border: 2px solid #555555;
@@ -146,49 +125,107 @@ li a:hover {
   font-weight: bold;
   transition-duration: 0.4s;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
 }
 
-.saveButton:hover{
+.saveButton:hover {
   background-color: #555555;
   color: white;
 }
 
-.delete-time{
+.delete-time {
   margin-top: 15px;
   padding: 10px;
 }
 
 /* Status Page Styles Start here */
-.status-container{
+.status-container {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: row;
-
 }
 .status-body-card {
-  margin-top: 15%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  
+
   width: fit-content;
- 
-  /* width: 890px; */
+
   height: fit-content;
-  padding: 10px;
-  
+  padding: 100px;
 }
 
-.status-qrcode{
+.status-qrcode {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15px;
   width: 40%;
-
 }
 
-.status-get-link{
+.status-get-link {
   cursor: pointer;
   margin-left: 30%;
+}
 
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .body-card {
+    width: 90%;
+    height: 30vh;
+  }
+
+  .body-content {
+    position: relative;
+    max-height: 70%;
+  }
+
+  .body-info-header,
+  .body-info-text {
+    margin-top: 0;
+    font-size: small;
+  }
+
+  /* .body-form{
+    width: 90%;
+    height: 30%;
+    
+  } */
+
+  .body-form {
+    /* padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0.4em;
+  padding-right: 0.4em;
+  margin-left: 20px; */
+    height: 50vh;
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .delete-time {
+    margin-top: 15px;
+    padding: 5px;
+  }
+
+  .submit-body {
+    all: revert;
+  }
+  .submit-body {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .inputbox {
+    height: 20vh;
+    width: 100%;
+  }
 }

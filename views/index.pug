@@ -10,6 +10,7 @@ block content
           a(href='#' class='About-nav') About
         li 
           a(href='#' class='Contact-nav') Contact
+    
     div.body-card
       div.body-content
         h1.body-info-header Move plain text files across devices using a link
@@ -17,7 +18,7 @@ block content
         p.body-info-text &#8226 You can provide a link to receive your content on the other end or can get a random link generated for you.
     div.body-form
       form(action='/save', method=POST)
-        textarea#inputbox(type='text', name='savedItem', required)
+        textarea.inputbox(type='text', name='savedItem', required)
         br
         select.delete-time(name="deleteTime")
           option(value="0") Immediately
