@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	div.content-container
+		div.header-content
+			ul.navbar
+				li(style='float:left')
+					a(href='/' class='home-nav' ) Home
+		div.content-body
+			p.content-body-text Here is your content
+			textarea.content-inputbox(type='text', name='savedItem', required) #{content}
+		div.footer-content
+			a.footer-message(href='https://github.com/Areezy' target='_blank')
+				| Made with 
+				span.heart-emoji &#9829
+				|  by Olamilekan Aremu
+

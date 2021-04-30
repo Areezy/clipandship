@@ -1,16 +1,11 @@
 extends layout
 
 block content
-  div.container
+  div.container 
     div.header-content
       ul.navbar
         li(style='float:left')
           a(href='/' class='home-nav' ) Home
-        li 
-          a(href='#' class='About-nav') About
-        li 
-          a(href='#' class='Contact-nav') Contact
-    
     div.body-card
       div.body-content
         h1.body-info-header Move plain text files across devices using a link
@@ -26,9 +21,15 @@ block content
           option(value="30") After 30 Minutes 
           option(value="60") After 1 hour 
           option(value="1440") After 24 hours 
+          option(value="10080") After 1 week 
+          option(value="43800") After 1 month 
         div.submit-body
           textarea.urlToSave(type='text', placeholder="url" name='urlToSave')
           input.saveButton(type='submit', value="Save Text") 
     div.footer-content
-      a(href='https://github.com/Areezy' target='_blank' class='footer-message') Made with 	&#9829 by Olamilekan Aremu
+      a.footer-message(href='https://github.com/Areezy' target='_blank')
+        | Made with 
+        span.heart-emoji &#9829
+        |  by Olamilekan Aremu
+
 

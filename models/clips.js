@@ -14,6 +14,10 @@ const clipSchema = new mongoose.Schema({
    },
    deleteTime:{
        type: Date
+   },
+   visited:{
+       type:Boolean,
+       default:false
    }
 });
 

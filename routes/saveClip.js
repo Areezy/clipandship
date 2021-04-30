@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 var router = express.Router();
 const {Clips} = require('../models/clips');
 const moment = require('moment');
-var QRCode = require('qrcode')
+var QRCode = require('qrcode');
 
 
 
@@ -14,8 +14,14 @@ router.get('/', async(req, res) => {
 
   //encode url in base64
   if(!url) url = Buffer.from(Date.now().toString()).toString('base64');
+
+  // TODO
   
-  if(clipExists) return res.send("Exists");
+  if(clipExists) return res.redirect('/get/:id', {
+    content:clipExists.content,
+    title:"Internet Clipboard"
+  
+  });
 
   const id = new mongoose.Types.ObjectId(); 
   const deleteTime = moment(id.getTimestamp()).add(parseInt(req.query.deleteTime), 'm').toDate();
@@ -47,7 +53,7 @@ router.get('/', async(req, res) => {
 
 router.get('/status', async(req, res) => {
   //replace in production
-  const qrCodeURL = 'https://localhost:3000/' + req.query.url;
+  const qrCodeURL = process.env.qrcodelink + req.query.url;
   QRCode.toDataURL(qrCodeURL, function (err, url) {
   res.render('saveStatus', {status:"Clip Saved Successfully", src:url, link:qrCodeURL});
 });

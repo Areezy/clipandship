@@ -8,6 +8,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.heart-emoji{
+  color: red;
+}
+
+
 body,
 .inputbox {
   background: #e8cbc0;
@@ -16,7 +21,7 @@ body,
 }
 
 a {
-  color: #00b7ff;
+  color: black;
 }
 
 ul {
@@ -76,7 +81,9 @@ li a:hover {
   width: 100%;
   color: white;
   text-align: center;
+
 }
+
 
 .body-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -169,7 +176,8 @@ li a:hover {
 
 .status-get-link {
   cursor: pointer;
-  margin-left: 30%;
+  margin-left: 27%;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
@@ -194,18 +202,10 @@ li a:hover {
     font-size: small;
   }
 
-  /* .body-form{
-    width: 90%;
-    height: 30%;
-    
-  } */
+
 
   .body-form {
-    /* padding-left: 0;
-  padding-top: 0;
-  padding-bottom: 0.4em;
-  padding-right: 0.4em;
-  margin-left: 20px; */
+
     height: 50vh;
     width: 90%;
     margin-left: 20px;
@@ -228,4 +228,42 @@ li a:hover {
     height: 20vh;
     width: 100%;
   }
+
 }
+
+.content-body{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.content-inputbox{
+  height: 70vh;
+  background: #e8cbc0;
+  background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
+  border-color: white;
+  font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
