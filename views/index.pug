@@ -12,10 +12,10 @@ block content
         p.body-info-text &#8226 Copy your text into the text box, select how long you want it saved for and click save.
         p.body-info-text &#8226 You can provide a link to receive your content on the other end or can get a random link generated for you.
     div.body-form
-      form(action='/save', method=POST)
-        textarea.inputbox(type='text', name='savedItem', required)
+      form(method="POST", action='/')
+        textarea.inputbox(type='text', name='content', required)
         br
-        select.delete-time(name="deleteTime")
+        select.delete-time(name='delete-time')
           option(value="0") Immediately
           option(value="5") After 5 Minutes 
           option(value="30") After 30 Minutes 
@@ -24,7 +24,7 @@ block content
           option(value="10080") After 1 week 
           option(value="43800") After 1 month 
         div.submit-body
-          textarea.urlToSave(type='text', placeholder="url" name='urlToSave')
+          textarea.urlToSave(type='text', name='urlToSave' placeholder="url")
           input.saveButton(type='submit', value="Save Text") 
     div.footer-content
       a.footer-message(href='https://github.com/Areezy' target='_blank')

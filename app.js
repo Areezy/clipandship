@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var saveClipRouter = require('./routes/saveClip');
 
+
+
 var app = express();
 
 mongoose.connect(process.env.dbURI, { useNewUrlParser: true}, { useUnifiedTopology: true })
@@ -19,9 +21,10 @@ mongoose.connect(process.env.dbURI, { useNewUrlParser: true}, { useUnifiedTopolo
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
