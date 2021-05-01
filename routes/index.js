@@ -8,7 +8,7 @@ const moment = require('moment');
 
 
 router.get('/', (req, res) => {
-  res.render('index', {title : "Clip&Ship"});
+  res.render('index');
 });
 
 router.post('/', async(req, res) => {
@@ -57,30 +57,24 @@ router.post('/', async(req, res) => {
 
 
 router.get('/:url', async (req, res) => {
+  
   const clip = await Clips.findOne({url : req.params.url});
   if (!clip) return res.redirect("/");
 
   
   if((clip.deleteTime < moment().toDate()) && clip.visited == true){
-    const status = await clip.delete();
+    await clip.delete();
     return res.redirect("/");
   }
 
   clip.visited = true;
-  const result = await clip.save();
+  await clip.save();
 
   res.render('getContent',
    {
     content:clip.content,
     title:"Internet Clipboard"
   });
-
-  try{
-    Promise.all([result, status]);
-
-  }catch(err){
-    console.log(err.message);
-  }
 
 
 

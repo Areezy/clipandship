@@ -8,23 +8,23 @@ block content
           a(href='/' class='home-nav' ) Home
     div.body-card
       div.body-content
-        h1.body-info-header Move plain text files across devices using a link
+        h1.body-info-header Clip&Ship plain text files across devices using a link
         p.body-info-text &#8226 Copy your text into the text box, select how long you want it saved for and click save.
         p.body-info-text &#8226 You can provide a link to receive your content on the other end or can get a random link generated for you.
     div.body-form
       form(method="POST", action='/')
         textarea.inputbox(type='text', name='content', required)
         br
-        select.delete-time(name='delete-time')
-          option(value="0") Immediately
-          option(value="5") After 5 Minutes 
-          option(value="30") After 30 Minutes 
-          option(value="60") After 1 hour 
-          option(value="1440") After 24 hours 
-          option(value="10080") After 1 week 
-          option(value="43800") After 1 month 
+        select.delete-time(name='deleteTime')
+          option(value="0") Immediately after viewing
+          option(value="5")  5 Minutes after viewing 
+          option(value="30")  30 Minutes after viewing
+          option(value="60")  1 hour after viewing
+          option(value="1440")  24 hours after viewing
+          option(value="10080")  1 week after viewing
+          option(value="43800")  1 month after viewing
         div.submit-body
-          textarea.urlToSave(type='text', name='urlToSave' placeholder="url")
+          textarea.urlToSave(type='text', name='urlToSave' placeholder="/url")
           input.saveButton(type='submit', value="Save Text") 
     div.footer-content
       a.footer-message(href='https://github.com/Areezy' target='_blank')

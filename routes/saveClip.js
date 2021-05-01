@@ -1,8 +1,5 @@
 var express = require('express');
-const mongoose = require('mongoose');
 var router = express.Router();
-const {Clips} = require('../models/clips');
-const moment = require('moment');
 var QRCode = require('qrcode');
 
 
