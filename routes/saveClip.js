@@ -7,7 +7,7 @@ router.get('/status', async(req, res) => {
   //replace in production
   const qrCodeURL = process.env.qrcodelink + req.query.url;
   QRCode.toDataURL(qrCodeURL, function (err, url) {
-  res.render('saveStatus', {status:"Clip Saved Successfully", src:url, link:qrCodeURL});
+  res.render('saveStatus', {status:"Clip Shipped Successfully", src:url, link:qrCodeURL});
 });
   
  
